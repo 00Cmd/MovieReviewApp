@@ -54,6 +54,7 @@ public class MovieListInteractor implements IMovieContarctor.MovieListInteractor
             @Override
             public void onSuccess(List<MovieListModel> data) {
                 mList.addAll(data);
+                mListener.onSuccess(data, "Data passed " + mList.size());
             }
 
             @Override

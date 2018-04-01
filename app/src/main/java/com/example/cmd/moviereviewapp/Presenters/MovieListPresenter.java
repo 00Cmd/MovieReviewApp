@@ -32,6 +32,7 @@ public class MovieListPresenter implements IMovieContarctor.MovieListPresenter, 
 
     @Override
     public void onSuccess(List<MovieListModel> data, String msg) {
+        mList = data;
         mView.onDataChange(data, msg);
     }
 
