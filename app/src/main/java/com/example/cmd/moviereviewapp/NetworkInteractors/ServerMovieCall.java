@@ -1,5 +1,7 @@
 package com.example.cmd.moviereviewapp.NetworkInteractors;
 
+import android.content.Context;
+
 import com.example.cmd.moviereviewapp.ApiCalls.IServerMovieApiHelper;
 import com.example.cmd.moviereviewapp.Constants.Constants;
 import com.example.cmd.moviereviewapp.Listeners.IOnDataCallback;
@@ -29,16 +31,21 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServerMovieCall {
     private Retrofit retrofit;
     private static ServerMovieCall mInstance;
+    private Context ctx;
 
     public static ServerMovieCall getInstance() {
-        if(mInstance == null) {
+        if (mInstance == null) {
             mInstance = new ServerMovieCall();
         }
         return mInstance;
     }
 
 
-    private ServerMovieCall() {
+    public ServerMovieCall() {
+        configureClient();
+    }
+
+    private void configureClient() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder()

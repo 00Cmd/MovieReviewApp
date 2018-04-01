@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity implements IFragmentInitiato
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*
-        * Movie this inside a InteractorListener and listen for calls.
-         */
 
         initFragment(MovieListFragment.getInstance());
     }
