@@ -7,11 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.cmd.moviereviewapp.R;
+
 /**
  * Created by cmd on 1.04.18.
  */
 
-public class SingleViewFragment extends Fragment{
+public class SingleViewFragment extends Fragment {
+    private static final String TAG = "SingleViewFragment";
 
     private static SingleViewFragment singleViewFramgnet;
 
@@ -26,7 +29,7 @@ public class SingleViewFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View v =inflater.inflate(R.la)
-        return null;
+        View v =inflater.inflate(R.layout.single_movie_fragment,container,false);
+        return v;
     }
 }

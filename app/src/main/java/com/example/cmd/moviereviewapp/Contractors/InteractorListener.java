@@ -13,4 +13,9 @@ import java.util.List;
 public interface InteractorListener {
     void onSuccess(List<MovieListModel> data, String msg);
     void onFailure(String msg);
+
+    interface InteractorLayerListener {
+        void onSuccess(MovieListModel model, String msg);
+        void onFailure(String msg);
+    }
 }
