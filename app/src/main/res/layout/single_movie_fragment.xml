@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.cmd.moviereviewapp.Views.SingleViewFragment">
+    tools:context="com.example.cmd.moviereviewapp.View.SingleViewFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/singleViewFragment"
